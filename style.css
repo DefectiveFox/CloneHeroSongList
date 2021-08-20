@@ -1,50 +1,68 @@
 @font-face {
 	font-family: "manga";
 	src: url("mangat.woff");
-  }
+}
 
 /* Reset */
 html, body, div, header, footer,
 h1, h2, h3, h4, h5, h6,
 ul, li, p, a {
-  margin: 0;
-  padding: 0;
-  font-family: "manga", 'Helvetica', 'Arial', 'Trebuchet MS', 'Verdana', sans-serif;
+margin: 0;
+padding: 0;
+font-family: "manga", 'Helvetica', 'Arial', 'Trebuchet MS', 'Verdana', sans-serif;
 }
 
 body {
 	background-color: rgb(25, 25, 31);
 	color: aliceblue;
 	margin: 5em 5%;
-	
+
 }
-h1{
+.header{
+	display: flex;
+	justify-content: space-around;
 	margin-bottom: 2em;
-	width: 50%;
+	width: 100%;
 	text-align: center;
+	align-items: center;
 }
+
+.button{
+	background-color: deeppink;
+	padding: 1em;
+	border-radius: 2em;
+}
+.button:hover{
+
+}
+
 .artist {
 	color:rgb(213, 221, 221);
 }
 
 .list {
-
-	list-style-type: none; /* Remove bullets */
-	display: inline-block;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: -.5em;
 	display: -moz-inline-box;
 	zoom: 1;
-	width:50%;
 	text-align: center;
 }
 
 .listElement{
+	width: 35%;
+	flex-grow: 1;
 	margin: 0.3em;
 	background-color: rgba(144, 78, 199, 0.137);
 	padding: 0.5em;
-	transition: background-color 0.1s;
-	transition: padding-left 0.1s;
+	transition: background-color 0.1s, padding-left 0.1s, padding-right 0.1s;
 }
-.listElement:hover{
+.listElement:hover:nth-child(even){
+	background-color: rgba(78, 185, 199, 0.137);
+	padding-right: 10%;
+}
+.listElement:hover:nth-child(odd){
 	background-color: rgba(78, 185, 199, 0.137);
 	padding-left: 10%;
 }

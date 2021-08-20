@@ -8,31 +8,39 @@
 </head>
 
 <body>
-	<h1>My SICC CloneHero songs!!!!11!</h1>
+	<div class = "header">
+		<span class = "button">
+			Sort by name!
+		</span>
+		<h1>My SICC CloneHero songs!!!!11!</h1>
+		<span class = "button">
+			Sort by artist!
+		</span>
+	</div>
 	<div class = "list">
 		{{#each data}}
 		<div class = "listElement">
 			<div class = "names">
 				<span class = "artist">
-					{{Artist}}
+					{{{Artist}}}
 				</span>
 				<span class = "name">
-					{{Name}}
-				</span>	
+					{{{Name}}}
+				</span>
 			</div>
 			<div class = "songInfo">
 				<span class = "album">
-					{{Album}}
+					{{{Album}}}
 				</span>
 				<span class = "year">
-					{{Year}}
+					{{{Year}}}
 				</span>
 				<span class = "length">
 					{{displayLength}}
-				</span>	
+				</span>
 			</div>
-			
-			
+
+
 		</div>
 		{{/each}}
 	</div>
