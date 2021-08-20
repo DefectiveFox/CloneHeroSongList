@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<style>
+		{{{css}}}
+	</style>
+</head>
+
+<body>
+	<h1>My SICC CloneHero songs!!!!11!</h1>
+	<ul class = "list">
+		{{#each data}}
+		<li class = "listElement">
+			<div class = "names">
+				<span class = "artist">
+					{{Artist}}
+				</span>
+				<span class = "name">
+					{{Name}}
+				</span>	
+			</div>
+			<div class = "songInfo">
+				<span class = "album">
+					{{Album}}
+				</span>
+				<span class = "year">
+					{{Year}}
+				</span>
+				<span class = "length">
+					{{displayLength}}
+				</span>	
+			</div>
+			
+			
+		</li>
+		{{/each}}
+	</ul>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+@font-face {
+	font-family: "manga";
+	src: url("mangat.woff");
+  }
+
+/* Reset */
+html, body, div, header, footer,
+h1, h2, h3, h4, h5, h6,
+ul, li, p, a {
+  margin: 0;
+  padding: 0;
+  font-family: "manga", 'Helvetica', 'Arial', 'Trebuchet MS', 'Verdana', sans-serif;
+}
+
+body {
+	background-color: rgb(25, 25, 31);
+	color: aliceblue;
+	margin: 5em 5%;
+	
+}
+h1{
+	margin-bottom: 2em;
+	width: 50%;
+	text-align: center;
+}
+.artist {
+	color:rgb(213, 221, 221);
+}
+
+.list {
+
+	list-style-type: none; /* Remove bullets */
+	display: inline-block;
+	display: -moz-inline-box;
+	zoom: 1;
+	width:50%;
+	text-align: center;
+}
+
+.listElement{
+	margin: 0.3em;
+	background-color: rgba(144, 78, 199, 0.137);
+	padding: 0.5em;
+	transition: background-color 0.1s;
+	transition: padding-left 0.1s;
+}
+.listElement:hover{
+	background-color: rgba(78, 185, 199, 0.137);
+	padding-left: 10%;
+}
+
+.songInfo{
+	color:rgb(208, 255, 255);
+	font-size: smaller;
+	margin-top: 0.2em;
+	display: inline-block;
+	display: -moz-inline-box;
+	zoom: 1;
+	width:100%;
+	text-align: center;
+}
+
+.year{
+	color:rgb(168, 207, 178);
+}
