@@ -1,0 +1,23 @@
+{
+  "name": "cloneherosongs",
+  "version": "1.0.0",
+  "description": "ass",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "handlebars": "^4.7.7"
+  },
+  "scripts": {
+    "build": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DefectiveFox/CloneHeroSongList.git"
+  },
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DefectiveFox/CloneHeroSongList/issues"
+  },
+  "homepage": "https://github.com/DefectiveFox/CloneHeroSongList#readme"
+}
