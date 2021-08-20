@@ -9,9 +9,9 @@
 
 <body>
 	<h1>My SICC CloneHero songs!!!!11!</h1>
-	<ul class = "list">
+	<div class = "list">
 		{{#each data}}
-		<li class = "listElement">
+		<div class = "listElement">
 			<div class = "names">
 				<span class = "artist">
 					{{Artist}}
@@ -33,9 +33,9 @@
 			</div>
 			
 			
-		</li>
+		</div>
 		{{/each}}
-	</ul>
+	</div>
 </body>
 
 </html>
