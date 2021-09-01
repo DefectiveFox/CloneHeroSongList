@@ -1,32 +1,47 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const entries = document.getElementById("entries");
+    const sortByName = document.getElementById('button1');
+	const sortByArtist = document.getElementById('button2');
 
-const entries = document.getElementById("entries");
+    sortByName.onclick = function () {
+        const songs = [];
+        const listElements = entries.querySelectorAll('.listElement');
+
+        for (const listElement of listElements) {
+            songs.push(listElement);
+            entries.removeChild(listElement);
+        }
+
+        songs.sort((a, b) => {
+            const aName = a.querySelector('div.names span.name').textContent;
+            const bName = b.querySelector('div.names span.name').textContent;
+
+            return aName.localeCompare(bName);
+        });
+
+        for (const song of songs)
+            entries.appendChild(song);
+	};
 
 
-var sortByName = document.getElementById('button1');
-sortByName.onclick = function () {
-	const songs =
-	json.entries.sort(function (a, b) {
-		return a.Name.localeCompare(b.Name);
-	});
-	list.innerHTML = '';
-	for (var i = 0; i < json.entries.length; i++) {
-		var entry = json.entries[i];
-		var listItem = document.createElement('li');
-		listItem.innerHTML = entry.Name;
-		list.appendChild(listItem);
-	}
-};
 
-/*var sortByArtist = document.getElementById('button2');
-sortByArtist.onclick = function() {
-  json.entries.sort(function(a, b) {
-	return a.Artist.localeCompare(b.Artist);
-  });
-  list.innerHTML = '';
-  for (var i = 0; i < json.entries.length; i++) {
-	var entry = json.entries[i];
-	var listItem = document.createElement('li');
-	listItem.innerHTML = entry.Name;
-	list.appendChild(listItem);
-  }
-};*/
+    sortByArtist.onclick = function () {
+        const songs = [];
+        const listElements = entries.querySelectorAll('.listElement');
+
+        for (const listElement of listElements) {
+            songs.push(listElement);
+            entries.removeChild(listElement);
+        }
+
+        songs.sort((a, b) => {
+            const aName = a.querySelector('div.names span.artist').textContent;
+            const bName = b.querySelector('div.names span.artist').textContent;
+
+            return aName.localeCompare(bName);
+        });
+
+        for (const song of songs)
+            entries.appendChild(song);
+    };
+});
