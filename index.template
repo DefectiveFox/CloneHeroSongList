@@ -9,15 +9,15 @@
 
 <body>
 	<div class = "header">
-		<span class = "button">
+		<span class = "button" id = "button1">
 			Sort by name!
 		</span>
 		<h1>My SICC CloneHero songs!!!!11!</h1>
-		<span class = "button">
+		<span class = "button" id = "button2">
 			Sort by artist!
 		</span>
 	</div>
-	<div class = "list">
+	<div class = "list" id = "entries">
 		{{#each data}}
 		<div class = "listElement">
 			<div class = "names">
