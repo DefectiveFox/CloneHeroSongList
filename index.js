@@ -7,8 +7,7 @@ let data = JSON.parse(fs.readFileSync(__dirname + "/songs.json", "utf-8"));
 
 data = data.map((song) => {
 	function msToTime(duration) {
-		var milliseconds = Math.floor((duration % 1000) / 100),
-		  seconds = Math.floor((duration / 1000) % 60),
+		var seconds = Math.floor((duration / 1000) % 60),
 		  minutes = Math.floor((duration / (1000 * 60)) % 60),
 		  hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
 
